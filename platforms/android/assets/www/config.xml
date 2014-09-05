@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="ru.taxi301777" version="1.0.0">
+    <name>Taxi 301777</name>
+    <description>Taxi 301777</description>
+    <author email="info@26web.ru" href="http://26web.ru">26web.ru</author>
+    <access origin="*"/>
+    <preference name="fullscreen" value="true"/>
+    <preference name="webviewbounce" value="true"/>
+
+    <icon src="www/img/icon.png"/>
+    <icon density="ldpi" platform="android" src="www/img/icon-36-ldpi.png"/>
+    <icon density="mdpi" platform="android" src="www/img/icon-48-mdpi.png"/>
+    <icon density="hdpi" platform="android" src="www/img/icon-72-hdpi.png"/>
+    <icon density="xhdpi" platform="android" src="www/img/icon-96-xhdpi.png"/>
+
+	<icon src="www/img/ios/icon-60.png" platform="ios" width="60" height="60" />
+	<icon src="www/img/ios/icon-60@2x.png" platform="ios" width="120" height="120" />
+	<icon src="www/img/ios/icon.png" platform="ios" width="57" height="57" />
+	<icon src="www/img/ios/icon@2x.png" platform="ios" width="114" height="114" />
+
+	<splash src="www/img/ios/Default-568h@2x.png" platform="ios" width="640" height="1136" />
+	<splash src="www/img/ios/Default.png" platform="ios" width="320" height="480" />
+	<splash src="www/img/ios/Default@2x.png" platform="ios" width="640" height="960" />
+
+	<gap:plugin name="org.apache.cordova.device" version="0.2.8" />
+	<gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
+</widget>

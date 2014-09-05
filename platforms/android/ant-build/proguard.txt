@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:6
+-keep class ru.Taxi301777.Taxi301777 { <init>(...); }
+

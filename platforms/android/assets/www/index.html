@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>Taxi 301777</title>
+	<link rel="stylesheet" href="css/framework7.css">
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="theme-black">
+	<div class="statusbar-overlay"></div>
+	<div class="panel-overlay"></div>
+
+	<!-- Левая панель-->
+	<div class="panel panel-left panel-reveal">
+		<div class="list-block">
+		</div>
+	</div>
+
+	<div class="views">
+		<div class="view view-main">
+
+			<!-- Шапка-->
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="center sliding"><span class="navbar-logo"></span></div>
+				</div>
+			</div>
+
+			<div class="pages navbar-through toolbar-through">
+				<div data-page="index" class="page">
+					<div class="page-content">
+						<div class="content-block">
+							<div class="content-block-inner">
+								<p class="login-screen-title">ЗАКАЗ ТАКСИ</p>
+
+								<div class="list-block">
+									<ul>
+										<li>
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title label">Откуда:</div>
+													<div class="item-input">
+														<input type="text" name="address_start" placeholder="Введите назначение" id="address_start">
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title label">Куда:</div>
+													<div class="item-input">
+														<input type="text" name="address_end" placeholder="Введите назначение" id="address_end">
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title label">Имя:</div>
+													<div class="item-input">
+														<input type="text" name="name" placeholder="Введите имя">
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title label">Телефон:</div>
+													<div class="item-input">
+														<input type="text" name="number" placeholder="Введите телефон">
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="content-block">
+									<div class="row">
+										<div class="col-15">
+											<button class="button button-big button-fill color-green taxiSend">Заказать такси</button>
+										</div>
+										<div class="col-80">
+											<div id="formError"></div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="toolbar">
+				<div class="toolbar-inner toolbarSum">
+					Приблизительная стоимость: <span>0</span> руб.
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="js/framework7.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
