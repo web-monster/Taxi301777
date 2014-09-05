@@ -8,17 +8,17 @@
 	<preference name="webviewbounce" value="true"/>
 
 	<icon src="www/img/icon.png"/>
-	<icon density="ldpi" platform="android" src="www/img/icon-36-ldpi.png"/>
-	<icon density="mdpi" platform="android" src="www/img/icon-48-mdpi.png"/>
-	<icon density="hdpi" platform="android" src="www/img/icon-72-hdpi.png"/>
-	<icon density="xhdpi" platform="android" src="www/img/icon-96-xhdpi.png"/>
+	<icon density="ldpi" platform="android" src="www/img/android/drawable-ldpi/icon.png"/>
+	<icon density="mdpi" platform="android" src="www/img/android/drawable-mdpi/icon.png"/>
+	<icon density="hdpi" platform="android" src="www/img/android/drawable-hdpi/icon.png"/>
+	<icon density="xhdpi" platform="android" src="www/img/android/drawable-xhdpi/icon.png"/>
 
-	<icon height="60" platform="ios" src="www/img/ios/icon-60.png" width="60"/>
-	<icon height="120" platform="ios" src="www/img/ios/icon-60@2x.png" width="120"/>
-	<icon height="57" platform="ios" src="www/img/ios/icon.png" width="57"/>
-	<icon height="114" platform="ios" src="www/img/ios/icon@2x.png" width="114"/>
+	<icon height="60" platform="ios" src="www/img/ios/icon/icon-60.png" width="60"/>
+	<icon height="120" platform="ios" src="www/img/ios/icon/icon-60@2x.png" width="120"/>
+	<icon height="57" platform="ios" src="www/img/ios/icon/icon.png" width="57"/>
+	<icon height="114" platform="ios" src="www/img/ios/icon/icon@2x.png" width="114"/>
 
-	<splash height="1136" platform="ios" src="www/img/ios/Default-568h@2x.png" width="640"/>
-	<splash height="480" platform="ios" src="www/img/ios/Default.png" width="320"/>
-	<splash height="960" platform="ios" src="www/img/ios/Default@2x.png" width="640"/>
+	<splash height="1136" platform="ios" src="www/img/ios/splash/Default-568h@2x~iphone.png" width="640"/>
+	<splash height="480" platform="ios" src="www/img/ios/splash/Default~iphone.png" width="320"/>
+	<splash height="960" platform="ios" src="www/img/ios/splash/Default@2x~iphone.png" width="640"/>
 </widget>
