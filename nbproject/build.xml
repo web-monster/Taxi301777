@@ -267,6 +267,7 @@ made subject to such option by the copyright holder.
             <arg value="-d"/>   
             <arg value="build"/>   
             <arg value="android"/>   
+            <arg value="--release"/>   
         </exec>
     </target>    
     

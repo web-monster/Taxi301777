@@ -30,11 +30,9 @@ var App = {
 			return;
 		}
 
-		$$('input').blur();
 		$$('.toolbarSum span').html(0);
 		var address_start = $$('#address_start').val().trim();
 		var address_end = $$('#address_end').val().trim();
-
 		if(address_start.length<5) {
 			return false;
 		}
@@ -55,6 +53,7 @@ var App = {
 
 	calcSum : function(data, status) {
 		oApp.hidePreloader();
+		$$('input').blur();
 		if (status == 'OK') {
 			var distanceStatus = data.rows[0]['elements'][0]['status'];
 			if(distanceStatus == 'OK') {
@@ -69,10 +68,10 @@ var App = {
 				}
 				$$('.toolbarSum span').html(App.iCost.toFixed(0));
 			} else {
-				alert('Ошибка. Неверный адрес.');
+				oApp.alert('Неверный адрес', 'Ошибка');
 			}
 		} else {
-			alert('Ошибка. Неверный адрес.');
+			oApp.alert('Неверный адрес', 'Ошибка');
 		}
 	},
 
@@ -84,15 +83,15 @@ var App = {
 		var address_end = $$('#address_end').val().trim();
 
 		if(address_start.length<5) {
-			alert('Укажите откуда будете ехать');
+			oApp.alert('Укажите откуда будете ехать', 'Внимание');
 			return false;
 		}
 		if(address_end.length<5) {
-			alert('Укажите куда будете ехать');
+			oApp.alert('Укажите куда будете ехать', 'Внимание');
 			return false;
 		}
 		if(number.length<5) {
-			alert('Введите номер телефона');
+			oApp.alert('Введите номер телефона', 'Внимание');
 			return false;
 		}
 		var address = address_start+' до '+address_end;
@@ -113,6 +112,7 @@ var App = {
 				oApp.hideIndicator();
 				mainView.loadPage('success.html');
 				$$('input').val('').blur();
+				$$('.toolbarSum span').html(0);
 			}
 		});
 	}
