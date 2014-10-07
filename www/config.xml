@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="ru.taxi301777" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="ru.taxi301777" version="1.0.1">
 	<name>Taxi 301777</name>
 	<description>Taxi 301777</description>
 	<author email="info@26web.ru" href="http://26web.ru">26web.ru</author>

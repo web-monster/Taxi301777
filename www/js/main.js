@@ -104,8 +104,8 @@ var App = {
 		oApp.showIndicator();
 		$$.ajax({
 			method: 'POST',
-			url: 'http://26web.ru/mobile.php?action=sendMail',
-			//url: 'http://taxi-301777.ru/sendMail1.php',
+			//url: 'http://26web.ru/mobile.php?action=sendMail',
+			url: 'http://taxi-301777.ru/sendMail.php',
 			dataType: 'json',
 			data : {"number":number,"text":address},
 			success: function(data) {
