@@ -33,9 +33,10 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "org.apache.cordova.device": "0.2.12-dev",
-    "org.apache.cordova.network-information": "0.2.12-dev",
-    "org.apache.cordova.splashscreen": "0.3.3-dev"
+    "org.apache.cordova.device": "0.3.0",
+    "org.apache.cordova.network-information": "0.2.15",
+    "org.apache.cordova.splashscreen": "1.0.0",
+    "cordova-plugin-whitelist": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

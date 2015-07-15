@@ -27,13 +27,13 @@
                 "parents": {
                     "SystemConfiguration.framework": [
                         {
-                            "xml": "true",
+                            "xml": true,
                             "count": 1
                         }
                     ],
                     "CoreGraphics.framework": [
                         {
-                            "xml": "false",
+                            "xml": false,
                             "count": 1
                         }
                     ]
@@ -50,6 +50,9 @@
         },
         "org.apache.cordova.splashscreen": {
             "PACKAGE_NAME": "ru.taxi301777"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ru.iformula"
         }
     },
     "dependent_plugins": {}

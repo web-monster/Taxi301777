@@ -8,4 +8,4 @@
 .navbar {background: none repeat scroll 0 0 #2b1127;border-bottom: medium none;color: #fff;height:60px;}
 .navbar a{color:#fff;}
 .navbar-logo{background: url("../img/logo.png") no-repeat scroll center center rgba(0, 0, 0, 0);display: block;height: 47px;width: 200px;}
-.toolbarSum{text-align: center;display:inline-block;padding:12px 4px;background: none repeat scroll 0 0 #283F5F;border-bottom: medium none;color: #fff;font-size: 13px;}
+.toolbarSum{text-align: center;display:inline-block;padding:12px 4px;background: none repeat scroll 0 0 #2b1127;border-bottom: medium none;color: #fff;font-size: 13px;}

@@ -1,10 +1,11 @@
-var oApp = new Framework7();
+var oApp = new Framework7({
+	cache: false,
+	cacheDuration: 1000
+});
 var $$ = Framework7.$;
 var mainView = oApp.addView('.view-main', {
 	dynamicNavbar: true,
-	swipeBackPage: true,
-	swipePanel: 'left',
-	swipePanelActiveArea: 150
+	swipeBackPage: true
 });
 
 var App = {
@@ -16,11 +17,7 @@ var App = {
 	checkConnection : function() {
 		if(App.isDev) return true;
 		var networkState = navigator.connection.type;
-		if(networkState=="none") {
-			return false;
-		} else {
-			return true;
-		}
+		return networkState != "none";
 	},
 
 	getDistance : function() {
@@ -30,11 +27,9 @@ var App = {
 			return;
 		}
 
-		$$('input').blur();
 		$$('.toolbarSum span').html(0);
 		var address_start = $$('#address_start').val().trim();
 		var address_end = $$('#address_end').val().trim();
-
 		if(address_start.length<5) {
 			return false;
 		}
@@ -55,6 +50,7 @@ var App = {
 
 	calcSum : function(data, status) {
 		oApp.hidePreloader();
+		$$('input').blur();
 		if (status == 'OK') {
 			var distanceStatus = data.rows[0]['elements'][0]['status'];
 			if(distanceStatus == 'OK') {
@@ -69,10 +65,10 @@ var App = {
 				}
 				$$('.toolbarSum span').html(App.iCost.toFixed(0));
 			} else {
-				alert('Ошибка. Неверный адрес.');
+				oApp.alert('Неверный адрес', 'Ошибка');
 			}
 		} else {
-			alert('Ошибка. Неверный адрес.');
+			oApp.alert('Неверный адрес', 'Ошибка');
 		}
 	},
 
@@ -84,15 +80,15 @@ var App = {
 		var address_end = $$('#address_end').val().trim();
 
 		if(address_start.length<5) {
-			alert('Укажите откуда будете ехать');
+			oApp.alert('Укажите откуда будете ехать', 'Внимание');
 			return false;
 		}
 		if(address_end.length<5) {
-			alert('Укажите куда будете ехать');
+			oApp.alert('Укажите куда будете ехать', 'Внимание');
 			return false;
 		}
 		if(number.length<5) {
-			alert('Введите номер телефона');
+			oApp.alert('Введите номер телефона', 'Внимание');
 			return false;
 		}
 		var address = address_start+' до '+address_end;
@@ -105,17 +101,18 @@ var App = {
 		oApp.showIndicator();
 		$$.ajax({
 			method: 'POST',
-			url: 'http://26web.ru/mobile.php?action=sendMail',
-			//url: 'http://taxi-301777.ru/sendMail1.php',
+			//url: 'http://26web.ru/mobile.php?action=sendMail',
+			url: 'http://taxi-301777.ru/sendMail.php',
 			dataType: 'json',
 			data : {"number":number,"text":address},
-			success: function(data) {
+			success: function() {
 				oApp.hideIndicator();
 				mainView.loadPage('success.html');
 				$$('input').val('').blur();
+				$$('.toolbarSum span').html(0);
 			}
 		});
 	}
-}
-$$('#address_start,#address_end').on('change',App.getDistance);
+};
+$$('#address_start, #address_end').on('change',App.getDistance);
 $$('.taxiSend').on('click',App.taxiSend);
