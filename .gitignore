@@ -1,4 +1,6 @@
-/test/
-/hooks/
-/platforms/
-/plugins/
+/test
+/hooks
+/platforms
+/plugins
+/bower_components
+/.idea

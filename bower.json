@@ -1,0 +1,20 @@
+{
+  "name": "Taxi301777",
+  "version": "1.0.1",
+  "main": "/js/framework7.js",
+  "license": "MIT",
+  "dependencies": {
+    "framework7": "~1.0.7"
+  },
+  "homepage": "https://github.com/web-monster/Taxi301777",
+  "authors": [
+    "RelaxDi"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
